@@ -19,12 +19,10 @@ public class DataLinkController {
 	@Autowired
 	private JedisPool jedisPool;
 	
-	@RequestMapping("/getProduct")
+	@RequestMapping("/product")
 	@ResponseBody
 	public String getProduct(Long productId) {
-		// 先读本地的ehcache，但是我们这里就不做了，因为之前都演示过了，大家自己做就可以了
-		
-		// 读redis主集群
+	
 		Jedis jedis = jedisPool.getResource();
 		String dimProductJSON = jedis.get("dim_product_" + productId);
 		

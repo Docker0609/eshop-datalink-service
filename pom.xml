@@ -49,7 +49,7 @@
 		    <artifactId>spring-boot-starter-amqp</artifactId>  
 		</dependency>
 		
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
@@ -62,7 +62,7 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>1.0.18</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>

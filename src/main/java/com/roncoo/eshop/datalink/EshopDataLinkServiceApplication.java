@@ -15,16 +15,13 @@ public class EshopDataLinkServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EshopDataLinkServiceApplication.class, args); 
 	}
-	
-	
 	@Bean
 	public JedisPool jedisPool() {
 		JedisPoolConfig config = new JedisPoolConfig();
 		config.setMaxTotal(100);
 		config.setMaxIdle(5);
-		config.setMaxWaitMillis(1000 * 10); 
+		config.setMaxWaitMillis(1000*10); 
 		config.setTestOnBorrow(true);
-		// 可能有问题
 		return new JedisPool(config, "192.168.31.103", 1111);
 	}
 }
